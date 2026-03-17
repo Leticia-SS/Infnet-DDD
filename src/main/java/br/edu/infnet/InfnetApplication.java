@@ -1,6 +1,7 @@
 package br.edu.infnet;
 
 import br.edu.infnet.model.Aluno;
+import br.edu.infnet.model.Disciplina;
 import br.edu.infnet.model.Email;
 import br.edu.infnet.model.Endereco;
 import br.edu.infnet.service.AlunoService;
@@ -25,7 +26,12 @@ public class InfnetApplication implements CommandLineRunner {
     public void run(String... args) {
         incluirAlunoEndereco();
         incluirEmails();
+        incluirDisciplina();
         consultarAlunos();
+    }
+
+    private void incluirDisciplina() {
+        Disciplina d1 = new Disciplina(null, "Java");
     }
 
     public void incluirEmails() {
